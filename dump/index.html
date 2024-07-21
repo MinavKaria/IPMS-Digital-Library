@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  Hello world
+  <script src="https://kjur.github.io/jsrsasign/jsrsasign-latest-all-min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+  <script>
+  //config
+  var clientId = "APP-5KYNG0V3YXWRKQRG";
+  var orcidAuthUrl = "https://orcid.org/oauth/authorize";
+  var orcidCert = {"kty":"RSA","e":"AQAB","use":"sig","kid":"sandbox-orcid-org-3hpgosl3b6lapenh1ewsgdob3fawepoj","n":"pl-jp-kTAGf6BZUrWIYUJTvqqMVd4iAnoLS6vve-KNV0q8TxKvMre7oi9IulDcqTuJ1alHrZAIVlgrgFn88MKirZuTqHG6LCtEsr7qGD9XyVcz64oXrb9vx4FO9tLNQxvdnIWCIwyPAYWtPMHMSSD5oEVUtVL_5IaxfCJvU-FchdHiwfxvXMWmA-i3mcEEe9zggag2vUPPIqUwbPVUFNj2hE7UsZbasuIToEMFRZqSB6juc9zv6PEUueQ5hAJCEylTkzMwyBMibrt04TmtZk2w9DfKJR91555s2ZMstX4G_su1_FqQ6p9vgcuLQ6tCtrW77tta-Rw7McF_tyPmvnhQ"};
+  var pubKey = KEYUTIL.getKey(orcidCert);
+
+  function getFragmentParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\#&]" + name + "=([^&#]*)"),
+          results = regex.exec(window.location.hash);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+  function checkSig(idToken){
+    return KJUR.jws.JWS.verifyJWT(idToken, pubKey, {
+      alg: ['RS256'], iss: ["https:\/\/sandbox.orcid.org"] , aud:clientId,gracePeriod: 15*60 //15 mins skew allowed
+    });
+  }
+
+  $(document).ready(function() {
+    var id_token = getFragmentParameterByName("id_token");
+    if(id_token){
+      $("#login").hide();
+      if (checkSig(id_token)){
+        $("#info").text("SIGNATURE VERIFIED!");
+        $("#contents").text(KJUR.jws.JWS.parse(id_token).payloadPP);
+      }else{
+        $("#info").text("INVALID TOKEN!");
+        $("#contents").text(KJUR.jws.JWS.parse(id_token).payloadPP);
+      }
+    }else{
+      $("#login").attr("href",orcidAuthUrl+"?response_type=token&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2F/example.html&client_id="+clientId+"&scope=openid&nonce=whatever");
+    }
+  });
+  </script>
+  <a id="login">sign into ORCID</a>
+  <h3 id="info"></h3><p id="contents"></p>
+</body>
+
+</html>
