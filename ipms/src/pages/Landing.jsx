@@ -1,8 +1,30 @@
 import React from 'react'
+import '../styles/Landing.css'
 
 function Landing() {
   return (
-    <div>Landing</div>
+    <>
+      <div className='landing'>
+          <div className='flex justify-center items-center h-full text-white flex-col'>
+              <h1 className='font-saira text-[2.25rem]'>Search</h1>
+              <h1 className='font-saira text-[1.125rem]'>with</h1>
+              <h1 className='font-saira  text-[3.5rem]'>IPMS Digital Library</h1>
+              <div>
+                <div className='search-bar'>
+                    <input type='text' placeholder='Search' className='search-input'/>
+                    <button className='search-btn'>Search</button>
+                </div>
+                <div>
+                    <p>Advanced Search</p>
+                </div>
+              </div>
+              
+          </div>
+          <div>
+             
+          </div>
+      </div>
+    </>
   )
 }
 

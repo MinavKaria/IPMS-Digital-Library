@@ -3,7 +3,11 @@ import React from 'react'
 function Footer() {
   return (
     <>
-        <h1>Footer</h1>
+        <div className='footer'>
+            <div>
+                <p>© {new Date().getFullYear()} IPMS. All rights reserved.</p>
+            </div>
+        </div>
     </>
   )
 }
