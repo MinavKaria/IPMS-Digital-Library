@@ -1,1 +1,1 @@
-# SwDC--IPMS-Digital-Library
+# IPMS-Digital-Library
