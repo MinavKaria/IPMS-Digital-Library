@@ -4,3 +4,17 @@
 {
     font-family: 'Saira Condensed', sans-serif;
 }
+
+.small-screen
+{
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:xx-large;
+}
+
+
+  
+  

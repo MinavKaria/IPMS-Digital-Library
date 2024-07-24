@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Landing.css'
+import Search from '../components/Search'
 
 function Landing() {
   return (
@@ -9,15 +10,7 @@ function Landing() {
               <h1 className='font-saira text-[2.25rem]'>Search</h1>
               <h1 className='font-saira text-[1.125rem]'>with</h1>
               <h1 className='font-saira  text-[3.5rem]'>IPMS Digital Library</h1>
-              <div>
-                <div className='search-bar'>
-                    <input type='text' placeholder='Search' className='search-input'/>
-                    <button className='search-btn'>Search</button>
-                </div>
-                <div>
-                    <p>Advanced Search</p>
-                </div>
-              </div>
+              <Search/>
               
           </div>
           <div>
