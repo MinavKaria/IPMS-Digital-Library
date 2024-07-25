@@ -4,6 +4,8 @@ import Layout from './../pages/Layout';
 import Contactus from '../pages/Contactus';
 import Login from '../pages/Login'
 import Dashboard from '../pages/Author/Dashboard';
+import Author1 from '../pages/Author/Author1';
+
 
 const router = createBrowserRouter([
   {
@@ -25,7 +27,12 @@ const router = createBrowserRouter([
       {
         path:'/author/dashboard',
         element:<Dashboard/>
+      },
+      {
+        path:'/author/paperdetails',
+        element:<Author1/>
       }
+      
     ],
   },
 ]);
