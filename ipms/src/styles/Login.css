@@ -1,0 +1,7 @@
+.my-bg
+{
+    background-image: url('/assets/landing back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
