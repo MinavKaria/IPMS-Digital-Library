@@ -1,11 +1,8 @@
 import { useState, useEffect } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import { RouterProvider } from 'react-router-dom';
 import router from './configs/router';
+import ContextProvider from './actions/Context';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,7 +27,9 @@ function App() {
         <div className="show-on-small-screens">Made for PC</div>
         </div>
       ) : (
-        <RouterProvider router={router} />
+        <ContextProvider>
+          <RouterProvider router={router} />
+        </ContextProvider>
       )}
     </>
   );
