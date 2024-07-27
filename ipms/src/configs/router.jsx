@@ -6,6 +6,7 @@ import Login from '../pages/Login'
 import Dashboard from '../pages/Author/Dashboard';
 import Author1 from '../pages/Author/Author1';
 import Author2 from '../pages/Author/Author2';
+import Author3 from '../pages/Author/Author3';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path:'/author/paperdetails2',
         element:<Author2/>
+      },
+      {
+        path:'/author/paperdetails3',
+        element:<Author3/>
       }
     ],
   },
