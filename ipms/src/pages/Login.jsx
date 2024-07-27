@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from 'react-router-dom';
 import "../styles/Login.css";
+import { Link } from "react-router-dom";
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
@@ -13,10 +14,10 @@ const SignupForm = () => {
   });
 
   const location = useLocation();
-  const [isSignup, setIsSignup] = useState(location.pathname === '/sign/login');
+  const [isSignup, setIsSignup] = useState(location.pathname === '/sign/signup');
 
   useEffect(() => {
-    setIsSignup(location.pathname === '/sign/login');
+    setIsSignup(location.pathname === '/sign/signup');
   }, [location]);
 
   const handleChange = (e) => {
@@ -129,11 +130,9 @@ const SignupForm = () => {
           </div>
           <div className="login flex gap-5">
             <label>{isSignup ? 'Already have an Account?' : "Don't have an account ?"}</label>
-            <button className="text-blue-500" type="button" onClick={() => {
-              setIsSignup(!isSignup);
-            }}>
+            <Link to={isSignup ? "/sign/login" : "/sign/signup"} className="text-blue-500">
               {isSignup ? 'Log In' : 'Sign up'}
-            </button>
+            </Link>
           </div>
         </div>
       </form>

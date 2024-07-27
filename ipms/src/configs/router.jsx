@@ -31,15 +31,15 @@ const router = createBrowserRouter([
         element:<Dashboard/>
       },
       {
-        path:'/author/paperdetails',
+        path:'/author/paperdetails/1',
         element:<Author1/>
       },
       {
-        path:'/author/paperdetails2',
+        path:'/author/paperdetails/2',
         element:<Author2/>
       },
       {
-        path:'/author/paperdetails3',
+        path:'/author/paperdetails/3',
         element:<Author3/>
       },
       {
