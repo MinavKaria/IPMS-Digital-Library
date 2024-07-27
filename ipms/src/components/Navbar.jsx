@@ -13,8 +13,8 @@ function Navbar() {
           </Link>
           <div className="text-white font-saira flex flex-row gap-10 items-center">
             <div className="text-xl">Help</div>
-            <Link className="text-xl" to="/sign">Login</Link>
-            <Link className="text-2xl" to="/sign">Sign Up</Link>
+            <Link className="text-xl" to="/sign/signup">Login</Link>
+            <Link className="text-2xl" to="/sign/login">Sign Up</Link>
           </div>
         </div>
 
