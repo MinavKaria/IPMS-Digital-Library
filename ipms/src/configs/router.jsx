@@ -5,7 +5,7 @@ import Contactus from '../pages/Contactus';
 import Login from '../pages/Login'
 import Dashboard from '../pages/Author/Dashboard';
 import Author1 from '../pages/Author/Author1';
-
+import Author2 from '../pages/Author/Author2';
 
 const router = createBrowserRouter([
   {
@@ -31,8 +31,11 @@ const router = createBrowserRouter([
       {
         path:'/author/paperdetails',
         element:<Author1/>
+      },
+      {
+        path:'/author/paperdetails2',
+        element:<Author2/>
       }
-      
     ],
   },
 ]);
