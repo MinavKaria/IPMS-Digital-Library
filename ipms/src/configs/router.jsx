@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         element: <Contactus/> ,
       },
       {
-        path: "/sign",
+        path: "/sign/*",
         element: <Login/>
       },
       {
