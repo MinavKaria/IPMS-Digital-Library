@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Navbar.css";
 import {Link} from 'react-router-dom'
 
 function Navbar() {
+  const [accessLevel,setAccessLevel] = useState(1);
   return (
     <>
       <div className="w-full top-nav">
@@ -13,8 +14,8 @@ function Navbar() {
           </Link>
           <div className="text-white font-saira flex flex-row gap-10 items-center">
             <div className="text-xl">Help</div>
-            <Link className="text-xl" to="/sign/signup">Login</Link>
-            <Link className="text-2xl" to="/sign/login">Sign Up</Link>
+            <Link className="text-xl" to="/sign/login">Login</Link>
+            <Link className="text-2xl" to="/sign/signup">Sign Up</Link>
           </div>
         </div>
 
@@ -27,15 +28,15 @@ function Navbar() {
             </div>
             <div className="flex flex-row gap-7">
               <div className="text-white"> 
-                <select className="bg-transparent focus:outline-none" >
-                  <option value="all" className="bg-black">Guest</option>
-                  <option value="Author" className="bg-black">Author </option>
-                  <option value="Reviewer" className="bg-black">Reviewer  </option>
-                  <option value="Editor " className="bg-black">Editor</option>
-                  <option value="ce" className="bg-black">Chief Editor</option>
+              <select className="bg-transparent focus:outline-none">
+                  {accessLevel >= 1 && <option value="Guest" className="bg-black">Guest</option>}
+                  {accessLevel >= 2 && <option value="Author" className="bg-black">Author</option>}
+                  {accessLevel >= 3 && <option value="Reviewer" className="bg-black">Reviewer</option>}
+                  {accessLevel >= 4 && <option value="Editor" className="bg-black">Editor</option>}
+                  {accessLevel >= 5 && <option value="Chief Editor" className="bg-black">Chief Editor</option>}
                 </select>
               </div>
-              <div>Setting</div>
+              <div>Alerts</div>
             </div>
           </div>
         </div>

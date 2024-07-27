@@ -32,6 +32,8 @@
     });
   }
 
+  encoded_url=encodeURIComponent("https://ipms-swdc.vercel.app");
+
   $(document).ready(function() {
     var id_token = getFragmentParameterByName("id_token");
     if(id_token){
@@ -44,7 +46,7 @@
         $("#contents").text(KJUR.jws.JWS.parse(id_token).payloadPP);
       }
     }else{
-      $("#login").attr("href",orcidAuthUrl+"?response_type=token&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2F/example.html&client_id="+clientId+"&scope=openid&nonce=whatever");
+      $("#login").attr("href",orcidAuthUrl+"?response_type=token&redirect_uri="+encoded_url+"&client_id="+clientId+"&scope=openid&nonce=whatever");
     }
   });
   </script>
