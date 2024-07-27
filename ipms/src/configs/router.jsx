@@ -7,6 +7,7 @@ import Dashboard from '../pages/Author/Dashboard';
 import Author1 from '../pages/Author/Author1';
 import Author2 from '../pages/Author/Author2';
 import Author3 from '../pages/Author/Author3';
+import Author4 from '../pages/Author/Author4';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path:'/author/paperdetails3',
         element:<Author3/>
+      },
+      {
+        path:'/author/paperdetails4',
+        element:<Author4/>
       }
     ],
   },
