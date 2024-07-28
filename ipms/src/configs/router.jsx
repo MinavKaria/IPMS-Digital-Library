@@ -9,6 +9,7 @@ import Author2 from '../pages/Author/Author2';
 import Author3 from '../pages/Author/Author3';
 import Author4 from '../pages/Author/Author4';
 import Reviewer1 from '../pages/Reviewer/Reviewer1';
+import Orchid from '../pages/Orcid';
 
 const router = createBrowserRouter([
   {
@@ -44,12 +45,17 @@ const router = createBrowserRouter([
         element:<Author3/>
       },
       {
-        path:'/author/paperdetails4',
+        path:'/author/paperdetails/4',
         element:<Author4/>
       },
       {
-        path:'/review/paperdetails1',
+        path:'/review/dashboard',
         element:<Reviewer1/>
+      },
+      {
+        path:'/orchid',
+        element:<Orchid/>
+
       }
     ],
   },
