@@ -3,8 +3,11 @@ import React from 'react'
 function Author4() {
   return (
  <>
-     <div className="container mx-auto px-4 grid grid-cols-3 gap-4 h-screen">
+     <div className="container mx-auto px-4 grid grid-cols-3 gap-4 h-screen"> 
             <div className="col-span-2 h-full overflow-y-scroll">
+            <h1 className='text-black text-4xl ml-12'>
+            Dashboard
+          </h1>
                 <form className="flex flex-col gap-8 opacity-110 rounded-3xl p-6 m-2">
                     <div className="flex flex-row m-4 mt-10">
                         <div className="w-2/4">
