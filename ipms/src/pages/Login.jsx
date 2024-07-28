@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import $ from 'jquery'; // Import jQuery
-import { KEYUTIL, KJUR } from 'jsrsasign'; // Import necessary modules from jsrsasign
+import $ from 'jquery';
+import { KEYUTIL, KJUR } from 'jsrsasign'; 
 import '../styles/Login.css';
 
 const SignupForm = () => {
@@ -42,14 +42,14 @@ const SignupForm = () => {
       alg: ['RS256'],
       iss: ["https://sandbox.orcid.org"],
       aud: clientId,
-      gracePeriod: 15 * 60 // 15 mins skew allowed
+      gracePeriod: 15 * 60 
     });
   }
 
   useEffect(() => {
     setIsSignup(location.pathname === '/sign/signup');
 
-    const encoded_url = encodeURIComponent("https://ipms-swdc.vercel.app");
+    const encoded_url = encodeURIComponent("https://ipms-swdc.vercel.app/author/dashboard");
 
     $(document).ready(function () {
       const id_token = getFragmentParameterByName("id_token");
