@@ -59,19 +59,25 @@ function Contactus() {
       <div className='text-3xl'>
         <h1>Helpul Links</h1>
       </div>
+      <hr></hr>
       <div className='m-4'>
         <a href='#'>Resources and help</a>
       </div>
+      <hr></hr>
       <div className='m-4'>
         <a href='#'>Traininng and User Tips</a>
       </div>
+      <hr></hr>
       <div className='m-4'>
         <a href='#'>Report Misuse</a>
       </div>
+      <hr></hr>
       <div className='m-4'>
         <a href='#'>Media Inquiries</a>
       </div>
+      <hr></hr>
     </div>
+    
 
     </div>
 
