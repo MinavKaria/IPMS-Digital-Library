@@ -17,22 +17,22 @@ function Contactus() {
 
       <div className=' flex flex-col mb-2 bg-blue-200 justify-normal w-5/5 p-1'>
         <label>Name</label>
-        <input type='text' className='form-control border-2 border-gray-400 rounded-md p-2'></input>
+        <input type='text' placeholder='Name' className='form-control border-2 border-gray-400 rounded-md p-2'></input>
       </div>
 
       <div className=' flex flex-col mb-2 bg-blue-200 justify-normal w-5/5 p-1'>
         <label>Email Id</label>
-        <input type='email' className='form-control border-2 border-gray-400 rounded-md p-2'></input>
+        <input type='email' placeholder='Email Id' className='form-control border-2 border-gray-400 rounded-md p-2'></input>
       </div>
 
       <div className=' flex flex-col mb-2 bg-blue-200 justify-normal w-5/5 p-1'>
         <label>Organization Name</label>
-        <input type='text' className='form-control border-2 border-gray-400 rounded-md p-2'></input>
+        <input type='text' placeholder='Organization Name' className='form-control border-2 border-gray-400 rounded-md p-2'></input>
       </div>
 
       <div className=' flex flex-col mb-2 bg-blue-200 justify-normal w-5/5 p-1'>
         <label>Subject</label>
-        <input type='text' className='form-control border-2 border-gray-400 rounded-md p-2'></input>
+        <input type='text' placeholder='Subject' className='form-control border-2 border-gray-400 rounded-md p-2'></input>
       </div>
 
       <div className=' flex flex-col mb-2 bg-blue-200 justify-normal w-5/5 p-1'>
