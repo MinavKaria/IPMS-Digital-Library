@@ -19,7 +19,7 @@ function Landing() {
         </div>
         <div className="container mx-auto font-saira mt-5 px-5">
           <h1 className=" text-5xl mb-5">Featured Article</h1>
-          <div className=" grid grid-cols-4 gap-5">
+          <div className=" grid grid-cols-3 gap-5 xl:grid-cols-4 lg:grid-cols-3">
             <FeaturedCard
               text="Dual-Band Dual-Polarized Planar Antenna for 5G Millimeter-Wave Antenna-in-Package Applications"
               image="assets/demo-feature-pic.png"
