@@ -9,11 +9,8 @@ import Author3 from '../pages/Author/Author3';
 import AuthorDashboard from '../pages/Author/Author4';
 import Reviewer1 from '../pages/Reviewer/Reviewer1';
 import Orchid from '../pages/Orcid';
-<<<<<<< HEAD
 import Editorial from '../pages/Editorial';
-=======
 import Reviewer2 from '../pages/Reviewer/Reviewer2';
->>>>>>> 96d85996d38565b8766ca936f0589f2d8093a002
 
 const router = createBrowserRouter([
   {
