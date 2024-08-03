@@ -11,6 +11,7 @@ import Reviewer1 from '../pages/Reviewer/Reviewer1';
 import Orchid from '../pages/Orcid';
 import Editorial from '../pages/Editorial';
 import Reviewer2 from '../pages/Reviewer/Reviewer2';
+import ReviewBoard from '../pages/ReviewBoard';
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path:'/editorial',
         element:<Editorial/>
+      },
+      {
+        path:'reviewboard',
+        element:<ReviewBoard/>
       }
     ],
   },
