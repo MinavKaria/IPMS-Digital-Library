@@ -12,42 +12,37 @@ function Contactus() {
 
     <div  className='flex justify-between space-x-2 mb-9 mt-5' id='form+links'>
 
-    <div className='item'>
-    <form className=' flex flex-col'>
+    <div className='item w-full'>
+    <form className=' flex flex-col w-2/5'>
 
-      <div className=' flex flex-col mb-2 bg-blue-200 justify-normal w-5/5 p-1'>
-        <label>Name</label>
-        <input type='text' placeholder='Name' className='form-control border-2 border-gray-400 rounded-md p-2'></input>
+      <div className=' flex flex-col mb-2  justify-normal p-1'>
+        <input type='text' placeholder='Name' className='form-control border-2 placeholder-[#0888A5] bg-[#C9EAF2] rounded-md p-2'></input>
       </div>
 
-      <div className=' flex flex-col mb-2 bg-blue-200 justify-normal w-5/5 p-1'>
-        <label>Email Id</label>
-        <input type='email' placeholder='Email Id' className='form-control border-2 border-gray-400 rounded-md p-2'></input>
+      <div className=' flex flex-col mb-2 justify-normal p-1'>
+        <input type='email' placeholder='Email Id' className='form-control border-2 placeholder-[#0888A5] bg-[#C9EAF2] rounded-md p-2'></input>
       </div>
 
-      <div className=' flex flex-col mb-2 bg-blue-200 justify-normal w-5/5 p-1'>
-        <label>Organization Name</label>
-        <input type='text' placeholder='Organization Name' className='form-control border-2 border-gray-400 rounded-md p-2'></input>
+      <div className=' flex flex-col mb-2 justify-normal  p-1'>
+        <input type='text' placeholder='Organization Name' className='form-control border-2 placeholder-[#0888A5] bg-[#C9EAF2] rounded-md p-2'></input>
       </div>
 
-      <div className=' flex flex-col mb-2 bg-blue-200 justify-normal w-5/5 p-1'>
-        <label>Subject</label>
-        <input type='text' placeholder='Subject' className='form-control border-2 border-gray-400 rounded-md p-2'></input>
+      <div className=' flex flex-col mb-2  justify-normal  p-1'>
+        <input type='text' placeholder='Subject' className='form-control border-2  placeholder-[#0888A5] bg-[#C9EAF2] rounded-md p-2'></input>
       </div>
 
-      <div className=' flex flex-col mb-2 bg-blue-200 justify-normal w-5/5 p-1'>
-        <label>how can we help you?</label>
-        <input type='text' className='form-control border-2 border-gray-400 rounded-md p-6'></input>
+      <div className=' flex flex-col mb-2 justify-normal p-1'>
+        <input placeholder='How can we help you?' type='text' className='form-control border-2 placeholder-[#0888A5] bg-[#C9EAF2]  rounded-md p-6'></input>
       </div>
       
-      <div id='policy'>
+      <div className=' flex gap-5'>
         <input type='checkbox'></input>
         <label>I have read and accept the <a href='#' >IPMS Privacy Policy</a></label>
       </div>
 
       <button
           type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue transition duration-300">
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue transition duration-300 mt-5">
           Submit
       </button>
 
