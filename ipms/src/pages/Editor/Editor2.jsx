@@ -17,7 +17,7 @@ function Editor2() {
             <div className="container mx-auto px-4">
               <div className="flex flex-row m-4 mt-10">
                 <div className="w-1/2">
-                  <p className="text-lg text-cyan-400 mb-2">Reviewer Email ID</p>
+                  <p className="text-lg text-cyan-700 mb-2">Reviewer Email ID</p>
                   <input
                     type="text"
                     className="bg-gray-300 w-7/12 h-10 p-2 rounded-lg"
@@ -25,7 +25,7 @@ function Editor2() {
                   />
                 </div>
                 <div className="w-1/2">
-                  <p className="text-lg text-cyan-400 mb-2">
+                  <p className="text-lg text-cyan-700 mb-2">
                     Retrieve Details
                   </p>
                   <input
@@ -38,7 +38,7 @@ function Editor2() {
   
               <div className="flex flex-row m-4 mt-10">
                 <div className="w-1/2">
-                  <p className="text-lg text-cyan-400 mb-2">Reviewer name</p>
+                  <p className="text-lg text-cyan-700 mb-2">Reviewer name</p>
                   <input
                     type="text"
                     className="bg-gray-300 w-7/12 h-10 p-2 rounded-lg"
@@ -46,7 +46,7 @@ function Editor2() {
                   />
                 </div>
                 <div className="w-1/2">
-                  <p className="text-lg text-cyan-400 mb-2">
+                  <p className="text-lg text-cyan-700 mb-2">
                     Reviewer contact number
                   </p>
                   <input
@@ -59,7 +59,7 @@ function Editor2() {
   
               <div className="flex flex-row m-4 mt-10">
                 <div className="w-1/2">
-                  <p className="text-lg text-cyan-400 mb-2">Reviewer Institution</p>
+                  <p className="text-lg text-cyan-700 mb-2">Reviewer Institution</p>
                   <input
                     type="text"
                     className="bg-gray-300 w-7/12 h-10 p-2 rounded-lg"
@@ -67,7 +67,7 @@ function Editor2() {
                   />
                 </div>
                 <div className="w-1/2">
-                  <p className="text-lg text-cyan-400 mb-2">
+                  <p className="text-lg text-cyan-700 mb-2">
                   Reviewer Affiliation
                   </p>
                   <input
