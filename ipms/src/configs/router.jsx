@@ -13,6 +13,8 @@ import Editorial from '../pages/Editorial';
 import Reviewer2 from '../pages/Reviewer/Reviewer2';
 import ReviewBoard from '../pages/ReviewBoard';
 import Reviewer3 from '../pages/Reviewer/Reviewer3';
+import Editor2 from '../pages/Editor/Editor2';
+import Editor3 from '../pages/Editor/Editor3';
 
 const router = createBrowserRouter([
   {
@@ -70,6 +72,14 @@ const router = createBrowserRouter([
       {
         path:'review/paperdetails/2',
         element:<Reviewer3/>
+      },
+      {
+        path:'editor/reviewerdetails',
+        element:<Editor2/>
+      },
+      {
+        path:'editor/dashboard',
+        element:<Editor3/>
       }
     ],
   },
