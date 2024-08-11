@@ -38,34 +38,34 @@ function Editor3() {
                    
                    <div>
                     <div className='flex justify-center items-center text-gray-600 rounded-3xl space-x-2 mb-4'>
-                        <div>
-                            <label className='block bg-white text-gray-700 px-4 rounded-xl '>14-08-24</label>
+                        <div className='block bg-white text-gray-700 px-4 rounded-xl border-spacing-8'>
+                            <label className='block bg-white text-gray-700 px-4 rounded-xl'>14-08-24</label>
                         </div>
-                        <div>
+                        <div className='block bg-gray-300 text-gray-700 px-4 rounded-xl border-spacing-8'>
                             <button className='block bg-gray-300 text-gray-700 px-4 rounded-xl'>View</button>
                         </div>
                     </div>
                     <div className='flex justify-center items-center text-gray-600 rounded-3xl space-x-2 mb-4'>
-                        <div>
-                            <label className='block bg-white text-gray-700 px-4 rounded-xl '>14-08-24</label>
+                        <div className='block bg-white text-gray-700 px-4 rounded-xl border-spacing-8'>
+                            <label className='block bg-white text-gray-700 px-4 rounded-xl'>14-08-24</label>
                         </div>
-                        <div>
+                        <div className='block bg-gray-300 text-gray-700 px-4 rounded-xl border-spacing-8'>
                             <button className='block bg-gray-300 text-gray-700 px-4 rounded-xl'>View</button>
                         </div>
                     </div>
                     <div className='flex justify-center items-center text-gray-600 rounded-3xl space-x-2 mb-4'>
-                        <div>
-                            <label className='block bg-white text-gray-700 px-4 rounded-xl '>14-08-24</label>
+                        <div className='block bg-white text-gray-700 px-4 rounded-xl border-spacing-8'>
+                            <label className='block bg-white text-gray-700 px-4 rounded-xl'>14-08-24</label>
                         </div>
-                        <div>
+                        <div className='block bg-gray-300 text-gray-700 px-4 rounded-xl border-spacing-8'>
                             <button className='block bg-gray-300 text-gray-700 px-4 rounded-xl'>View</button>
                         </div>
                     </div>
                     <div className='flex justify-center items-center text-gray-600 rounded-3xl space-x-2 mb-4'>
-                        <div>
-                            <label className='block bg-white text-gray-700 px-4 rounded-xl '>14-08-24</label>
+                        <div className='block bg-white text-gray-700 px-4 rounded-xl border-spacing-8'>
+                            <label className='block bg-white text-gray-700 px-4 rounded-xl'>14-08-24</label>
                         </div>
-                        <div>
+                        <div className='block bg-gray-300 text-gray-700 px-4 rounded-xl border-spacing-8'>
                             <button className='block bg-gray-300 text-gray-700 px-4 rounded-xl'>View</button>
                         </div>
                     </div>
@@ -77,34 +77,34 @@ function Editor3() {
                    
                    <div>
                     <div className='flex justify-center items-center text-gray-600 rounded-3xl space-x-2 mb-4'>
-                        <div>
+                        <div className='block bg-white text-gray-700 px-4 rounded-xl border-spacing-8'>
                             <label className='block bg-white text-gray-700 px-4 rounded-xl '>Reviewer 1</label>
                         </div>
-                        <div>
+                        <div className='block bg-gray-300 text-gray-700 px-4 rounded-xl border-spacing-8'>
                             <button className='block bg-gray-300 text-gray-700 px-4 rounded-xl'>View</button>
                         </div>
                     </div>
                     <div className='flex justify-center items-center text-gray-600 rounded-3xl space-x-2 mb-4'>
-                        <div>
+                        <div className='block bg-white text-gray-700 px-4 rounded-xl border-spacing-8'>
                             <label className='block bg-white text-gray-700 px-4 rounded-xl '>Reviewer 2</label>
                         </div>
-                        <div>
+                        <div className='block bg-gray-300 text-gray-700 px-4 rounded-xl border-spacing-8'>
                             <button className='block bg-gray-300 text-gray-700 px-4 rounded-xl'>View</button>
                         </div>
                     </div>
                     <div className='flex justify-center items-center text-gray-600 rounded-3xl space-x-2 mb-4'>
-                        <div>
+                        <div className='block bg-white text-gray-700 px-4 rounded-xl border-spacing-8'>
                             <label className='block bg-white text-gray-700 px-4 rounded-xl '>Reviewer 3</label>
                         </div>
-                        <div>
+                        <div className='block bg-gray-300 text-gray-700 px-4 rounded-xl border-spacing-8'>
                             <button className='block bg-gray-300 text-gray-700 px-4 rounded-xl'>View</button>
                         </div>
                     </div>
                     <div className='flex justify-center items-center text-gray-600 rounded-3xl space-x-2 mb-4'>
-                        <div>
+                        <div className='block bg-white text-gray-700 px-4 rounded-xl border-spacing-8'>
                             <label className='block bg-white text-gray-700 px-4 rounded-xl '>Reviewer 4</label>
                         </div>
-                        <div>
+                        <div className='block bg-gray-300 text-gray-700 px-4 rounded-xl border-spacing-8'>
                             <button className='block bg-gray-300 text-gray-700 px-4 rounded-xl'>View</button>
                         </div>
                     </div>

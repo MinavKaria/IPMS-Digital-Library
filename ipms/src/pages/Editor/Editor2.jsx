@@ -5,12 +5,8 @@ function Editor2() {
     return (
        <>
          <div className="container mx-auto px-4">
-         <h1 className='text-start text-4xl mb-1 m-10'>
-              Reviewer Details
-          </h1>
-          <h2 className='text-start text-2xl mb-1 m-10'>
-              Primary Reviwer Details
-          </h2>
+         <h1 className="text-black text-5xl font-semibold mb-1 mt-3">Reviewer Details</h1>
+         <h1 className="text-black text-2xl font-semibold">Primary Reviewer Details</h1>
           <form className="container  flex flex-col gap-8 opacity-110  rounded-3xl p-6 m-2" onSubmit={(e)=>{
             e.preventDefault()
           }}>
