@@ -15,6 +15,8 @@ import ReviewBoard from '../pages/ReviewBoard';
 import Reviewer3 from '../pages/Reviewer/Reviewer3';
 import Editor2 from '../pages/Editor/Editor2';
 import Editor3 from '../pages/Editor/Editor3';
+import Editor5 from '../pages/Editor/Editor5';
+
 
 const router = createBrowserRouter([
   {
@@ -80,6 +82,10 @@ const router = createBrowserRouter([
       {
         path:'editor/dashboard',
         element:<Editor3/>
+      },
+      {
+        path:'editor5',
+        element:<Editor5/>
       }
     ],
   },
