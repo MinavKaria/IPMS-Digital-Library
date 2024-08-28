@@ -15,7 +15,13 @@ import ReviewBoard from '../pages/ReviewBoard';
 import Reviewer3 from '../pages/Reviewer/Reviewer3';
 import Editor2 from '../pages/Editor/Editor2';
 import Editor3 from '../pages/Editor/Editor3';
+import Editor4 from '../pages/Editor/Editor4';
 import Editor5 from '../pages/Editor/Editor5';
+import Editor6 from '../pages/Editor/Editor6';
+import Ce2 from '../pages/ChiefEditor/Ce2';
+import Ce4 from '../pages/ChiefEditor/Ce4';
+
+
 
 
 const router = createBrowserRouter([
@@ -84,8 +90,24 @@ const router = createBrowserRouter([
         element:<Editor3/>
       },
       {
+        path:'editor4',
+        element:<Editor4/>
+      },
+      {
         path:'editor5',
         element:<Editor5/>
+      },
+      {
+        path:'editor6',
+        element:<Editor6/>
+      },
+      {
+        path:'ce2',
+        element:<Ce2/>
+      },
+      {
+        path:'ce4',
+        element:<Ce4/>
       }
     ],
   },
