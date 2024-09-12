@@ -14,12 +14,14 @@ import Reviewer2 from '../pages/Reviewer/Reviewer2';
 import ReviewBoard from '../pages/ReviewBoard';
 import Reviewer3 from '../pages/Reviewer/Reviewer3';
 import Editor2 from '../pages/Editor/Editor2';
-import Editor3 from '../pages/Editor/Editor3';
+import Editor3 from '../pages/Editor/Dashboard';
 import Editor4 from '../pages/Editor/Editor4';
 import Editor5 from '../pages/Editor/Editor5';
 import Editor6 from '../pages/Editor/Editor6';
 import Ce2 from '../pages/ChiefEditor/Ce2';
 import Ce4 from '../pages/ChiefEditor/Ce4';
+import Layout2 from '../pages/Layout2';
+import Guidelines from '../pages/Guidlines';
 
 
 
@@ -33,60 +35,101 @@ const router = createBrowserRouter([
         path: "/",
         element: <Landing />, 
       },
-      {
-        path: "/contactus",
-        element: <Contactus/> ,
-      },
+     
       {
         path: "/sign/*",
         element: <Login/>
       },
+     
+    ],
+  },
+  {
+    path: "/author/",
+    element: <Layout2 />,
+    children:[
       {
-        path:'/author/paperdetails/1',
+        path:'paperdetails/1',
         element:<Author1/>
       },
       {
-        path:'/author/paperdetails/2',
+        path:'paperdetails/2',
         element:<Author2/>
       },
       {
-        path:'/author/paperdetails/3',
+        path:'paperdetails/3',
         element:<Author3/>
       },
       {
-        path:'/author/dashboard',
+        path:'dashboard',
         element:<AuthorDashboard/>
       },
+     
       {
-        path:'/review/dashboard',
-        element:<Reviewer1/>
-      },
-      {
-        path:'/review/paperdetails/1',
-        element:<Reviewer2/>
-      },
-      {
-        path:'/orchid',
+        path:'orchid',
         element:<Orchid/>
       },
       {
-        path:'/editorial',
+        path:'editorial',
         element:<Editorial/>
       },
       {
         path:'reviewboard',
         element:<ReviewBoard/>
       },
+      
+      
       {
-        path:'review/paperdetails/2',
-        element:<Reviewer3/>
+        path:'ce2',
+        element:<Ce2/>
       },
       {
-        path:'editor/reviewerdetails',
+        path:'ce4',
+        element:<Ce4/>
+      },
+      {
+        path:'guidelines',
+        element:<Guidelines/>
+      }
+    ]
+  },
+  {
+    path: "/contactus",
+    element: <Layout2/> ,
+    children:[
+      {
+        path:'',
+        element:<Contactus/>
+      }
+    ]
+  },
+  {
+    path: "reviewer/",
+    element: <Layout2/>,
+    children:[
+      {
+        path:'dashboard',
+        element:<Reviewer1/>
+      },
+      {
+        path:'paperdetails/1',
+        element:<Reviewer2/>
+      },
+      {
+        path:'paperdetails/2',
+        element:<Reviewer3/>
+      },
+    ]
+  },
+  {
+    path: "editor/",
+    element: <Layout2/>,
+    children:[
+      {
+        path:'reviewerdetails',
         element:<Editor2/>
       },
       {
-        path:'editor/dashboard',
+        path:'dashboard',
         element:<Editor3/>
       },
       {
@@ -101,16 +144,8 @@ const router = createBrowserRouter([
         path:'editor6',
         element:<Editor6/>
       },
-      {
-        path:'ce2',
-        element:<Ce2/>
-      },
-      {
-        path:'ce4',
-        element:<Ce4/>
-      }
-    ],
-  },
+    ]
+  }
 ]);
 
 

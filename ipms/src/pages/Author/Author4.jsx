@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Author4() {
   return (
@@ -76,14 +77,11 @@ function Author4() {
           <div className="flex flex-col gap-8 opacity-110 rounded-3xl p-6 m-2">
             <div className="bg-slate-300 h-20 p-5 rounded-lg flex items-center justify-between">
               <button className="bg-white text-grey border-black px-4 rounded">
-                Edit
-              </button>
-              <button className="bg-white text-grey border-black px-4 rounded">
                 Request Changes
               </button>
-              <button className="bg-white text-grey border-black px-4 rounded">
+              <Link className="bg-white text-grey border-black px-4 rounded" to='/author/paperdetails/1'>
                 Add New Paper
-              </button>
+              </Link>
             </div>
 
             <div className="bg-slate-300 p-5 h-auto rounded-3xl">

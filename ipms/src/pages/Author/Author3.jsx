@@ -49,12 +49,13 @@ function Author3() {
               Review{" "}
             </button>
 
-            <button
+            <Link
               type="submit"
               className="bg-gray-400 text-white px-4 py-2 rounded-full"
+              to='/author/dashboard'
             >
               Submit{" "}
-            </button>
+            </Link>
           </div>
           <div className="flex items-center justify-center mt-4">
             <span className="mr-2">Page 3 of 3</span>
@@ -66,7 +67,7 @@ function Author3() {
             >
               {"<"} Back
             </Link>
-            <Link className="btn btn-primary cursor-not-allowed" to="/author/paperdetails/2">
+            <Link className=" cursor-not-allowed backdrop-blur " to="">
               Next {">"}
             </Link>
           </div>

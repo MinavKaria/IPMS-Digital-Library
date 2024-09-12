@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Reviewer2() {
   const [feedback, setFeedback] = useState({
@@ -77,7 +78,13 @@ function Reviewer2() {
             </div>
           </div>
         ))}
+        <br />
+        <Link className="bg-[#676565] text-white px-4 py-2 rounded-2xl" to="/reviewer/paperdetails/2">
+            Next
+        </Link>
       </div>
+      
+      
     </div>
   );
 }

@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
 import {Link} from 'react-router-dom'
+import { useGlobalContext } from "../actions/Context";
 
 function Navbar() {
-  const [accessLevel,setAccessLevel] = useState(1);
+  // const [accessLevel,setAccessLevel] = useState(1);
+  const {isLogin,accessLevel,setAccessLevel,setIsLogin} = useGlobalContext();
+
   return (
     <>
       <div className="w-full top-nav">

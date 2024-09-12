@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Reviewer1() {
   return (
@@ -12,6 +13,7 @@ function Reviewer1() {
                     <div className="mb-4">
                         <label className="bg-white text-gray-700 border border-black rounded-xl px-4 m-5">12-02-2023</label>
                         <label className="bg-white text-gray-700 w-15 px-4 rounded-xl ml-4"><b>Paper ID:</b> 12144345</label>
+                        <Link className=" bg-black text-white w-15 px-4 rounded-xl ml-4" to='/reviewer/paperdetails/1'>Check</Link>
                     </div>
                     <div className="mb-4 m-5">
                         <label className="block bg-white text-gray-700 px-4 rounded-xl"><b>Title:</b> New Quantum effect on surroundings. Experimental Data acquiring using atomic frequency and oscillations.</label>

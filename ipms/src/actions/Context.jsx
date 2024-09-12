@@ -3,9 +3,12 @@ import { useState, createContext, useContext } from 'react'
 
 const Context = createContext()
 
-function ContextProvider({ children }) {
+function ContextProvider({ children }) 
+{
+  const [isLogin, setIsLogin] = useState(true);
+  const [accessLevel,setAccessLevel] = useState(3);
   return (
-    <Context.Provider value={{}}>
+    <Context.Provider value={{isLogin,setIsLogin,accessLevel,setAccessLevel}}>
       {children}
     </Context.Provider>
   )
