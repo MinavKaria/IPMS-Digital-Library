@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
 function Reviewer2() {
-    const [feedback, setFeedback] = useState({
-        Quality: "",
-        Relevance: "",
-        Clarity: "",
-        Methodology: "",
-        Originality: "",
-        Citations: "",
-        Feedback: "",
-      });
+  const [feedback, setFeedback] = useState({
+    Quality: "",
+    Relevance: "",
+    Clarity: "",
+    Methodology: "",
+    Originality: "",
+    Citations: "",
+    Feedback: "",
+  });
 
   const pdfUrl =
     "https://firebasestorage.googleapis.com/v0/b/datastorage-9b3b6.appspot.com/o/CGV_1.2.pdf?alt=media&token=44523f6a-43ad-4e8e-b346-833cf18eabec";
@@ -19,67 +19,71 @@ function Reviewer2() {
 
   return (
     <div>
-    <div className="flex min-h-[80vh] font-saira">
-      <div className="w-2/3">
-        <div className="px-5">
-          <div className="flex justify-between w-1/2 gap-5">
-            <div>
-              <h1 className="text-xl font-semibold">Paper ID</h1>
-              <p className="text-md">CGV_1.2</p>
+      <div className="flex min-h-[80vh] font-saira">
+        <div className="w-2/3">
+          <div className="px-5">
+            <div className="flex justify-between w-1/2 gap-5">
+              <div>
+                <h1 className="text-xl font-semibold">Paper ID</h1>
+                <p className="text-md">CGV_1.2</p>
+              </div>
+              <div>
+                <h1 className="text-xl font-semibold">Track ID</h1>
+                <p className="text-md">12121212</p>
+              </div>
             </div>
+            <br />
             <div>
-              <h1 className="text-xl font-semibold">Track ID</h1>
-              <p className="text-md">12121212</p>
+              <h1 className="text-xl font-semibold">Title</h1>
+              <p className="text-md">
+                New Quantum effect on surroundings. Experimental Data acquiring
+                using atomic frequency and oscillations.
+              </p>
             </div>
+          </div>
+          <div className=" bg-gray-200 ">
+            <iframe
+              src={googleDocsViewerUrl}
+              className="w-full h-[70vh] "
+            ></iframe>
+          </div>
+        </div>
+
+        <div className="w-1/3 p-4 max-h-[90vh] overflow-scroll">
+          <h2 className="text-2xl font-semibold mb-4">Reviewers feedback</h2>
+          {Object.keys(feedback).map((category, index) => (
+            <div key={index} className="mb-6">
+              <h3 className="text-lg font-medium mb-1">
+                {index + 1}. {category} <span className="text-red-500">*</span>
+              </h3>
+              <textarea
+                className="w-full p-2 mb-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Comment"
+                value={feedback[category]}
+                onChange={(e) =>
+                  setFeedback({ ...feedback, [category]: e.target.value })
+                }
+              ></textarea>
+            </div>
+          ))}
+
+          <div className="w-full flex justify-center gap-10 mb-10">
+            <button className="bg-[#676565] text-white px-4 py-2 rounded-2xl">
+              Submit
+            </button>
+            <button className="bg-[#676565] text-white px-4 py-2 rounded-2xl">
+              Save Draft
+            </button>
+            <button className="bg-[#676565] text-white px-4 py-2 rounded-2xl">
+              Cancel
+            </button>
           </div>
           <br />
-          <div>
-            <h1 className="text-xl font-semibold">Title</h1>
-            <p className="text-md">
-              New Quantum effect on surroundings. Experimental Data acquiring
-              using atomic frequency and oscillations.
-            </p>
-          </div>
-        </div>
-        <div className=" bg-gray-200 ">
-          <iframe
-            src={googleDocsViewerUrl}
-            className="w-full min-h-[85vh] "
-          ></iframe>
+          <br />
+          <br />
+          <br />
         </div>
       </div>
-
-      <div className="w-1/3 p-4">
-        <h2 className="text-2xl font-semibold mb-4">Reviewers feedback</h2>
-        {(Object.keys(feedback)).map((category, index) => (
-            <div key={index} className="mb-6">
-            <h3 className="text-lg font-medium mb-1">
-              {index + 1}. {category} <span className="text-red-500">*</span>
-            </h3>
-            <textarea
-              className="w-full p-2 mb-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Comment"
-              value={feedback[category]}
-              onChange={(e) =>
-                setFeedback({ ...feedback, [category]: e.target.value })
-              }
-            ></textarea>
-          </div>
-        ))}
-      </div>
-      
-    </div>
-    <div className="w-full flex justify-center gap-10 mb-10">
-        <button className="bg-[#676565] text-white px-4 py-2 rounded-2xl">
-            Submit
-        </button>
-        <button className="bg-[#676565] text-white px-4 py-2 rounded-2xl">
-            Save Draft
-        </button>
-        <button className="bg-[#676565] text-white px-4 py-2 rounded-2xl">
-            Cancel
-        </button>
-    </div>
     </div>
   );
 }
