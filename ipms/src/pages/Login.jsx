@@ -49,7 +49,7 @@ const SignupForm = () => {
   useEffect(() => {
     setIsSignup(location.pathname === '/sign/signup');
 
-    const encoded_url = encodeURIComponent("https://ipms-swdc.vercel.app/author/dashboard");
+    const encoded_url = encodeURIComponent("https://ipms-digital-library.vercel.app/author/dashboard");
 
     $(document).ready(function () {
       const id_token = getFragmentParameterByName("id_token");
