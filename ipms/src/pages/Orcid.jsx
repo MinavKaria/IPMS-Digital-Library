@@ -35,7 +35,7 @@ const Orchid = () => {
   }
 
   useEffect(() => {
-    const encoded_url = encodeURIComponent("https://ipms-swdc.vercel.app");
+    const encoded_url = encodeURIComponent("https://ipms-digital-library.vercel.app");
 
     $(document).ready(function () {
       const id_token = getFragmentParameterByName("id_token");
