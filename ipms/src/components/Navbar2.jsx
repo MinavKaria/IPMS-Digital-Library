@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { useGlobalContext } from "../actions/Context";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Navbar2() {
-  const [activeTab, setActiveTab] = useState("Guidelines");
+  const [activeTab, setActiveTab] = useState("Dashboard");
   const { accessLevel } = useGlobalContext();
+  const [localAccessLevel, setLocalAccessLevel] = useState(accessLevel);
+  const navigate=useNavigate();
 
   const tabs = [
     {
@@ -24,6 +27,18 @@ function Navbar2() {
         icon: "/dashboard.svg",
         routeTo: "/reviewer/dashboard",
         accessLevel: 3,
+    },
+    {
+        name:"Dashboard",
+        icon:"/dashboard.svg",
+        routeTo:"/editor/dashboard",
+        accessLevel:4,
+    },
+    {
+      name: "Author Submissons",
+      icon: "/menu_book.svg",
+      routeTo: "/editor/authorsubmission",
+      accessLevel: 4,
     },
     {
       name: "Contact Us",
@@ -48,18 +63,36 @@ function Navbar2() {
               <select
                 className="bg-transparent focus:outline-none"
                 value={
-                  accessLevel === 1
+                  localAccessLevel === 1
                     ? "Guest"
-                    : accessLevel === 2
+                    : localAccessLevel === 2
                     ? "Author"
-                    : accessLevel === 3
+                    : localAccessLevel === 3
                     ? "Reviewer"
-                    : accessLevel === 4
+                    : localAccessLevel === 4
                     ? "Editor"
-                    : accessLevel === 5
+                    : localAccessLevel === 5
                     ? "Chief Editor"
                     : ""
                 }
+                onChange={(e) => {
+                  if (e.target.value === "Guest") {
+                    setLocalAccessLevel(1);
+                    navigate("/");
+                  } else if (e.target.value === "Author") {
+                    setLocalAccessLevel(2);
+                    navigate("/author/dashboard");
+                  } else if (e.target.value === "Reviewer") {
+                    setLocalAccessLevel(3);
+                    navigate("/reviewer/dashboard");
+                  } else if (e.target.value === "Editor") {
+                    setLocalAccessLevel(4);
+                    navigate("/editor/dashboard");
+                  } else if (e.target.value === "Chief Editor") {
+                    setLocalAccessLevel(5);
+                    navigate("/chiefeditor/dashboard");
+                  }
+                }}
               >
                 {accessLevel >= 1 && (
                   <option value="Guest" className="bg-black">
@@ -95,7 +128,7 @@ function Navbar2() {
 
 
       <div className=" bg-black text-white flex justify-center items-center space-x-4 py-2">
-        {tabs.filter((tab) => (tab.accessLevel === accessLevel || tab.accessLevel===0)).map((tab) => (
+        {tabs.filter((tab) => (tab.accessLevel === localAccessLevel || tab.accessLevel===0)).map((tab) => (
           <Link
             to={tab.routeTo}
             key={tab.name}

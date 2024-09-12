@@ -1,78 +1,92 @@
-import React from 'react';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-const ReviewForm = () => {
+function Editor6() {
+  const [feedback, setFeedback] = useState({
+    Quality: "",
+    Relevance: "",
+    Clarity: "",
+    Methodology: "",
+    Originality: "",
+    Citations: "",
+    Feedback: "",
+  });
+
+  const pdfUrl =
+    "https://firebasestorage.googleapis.com/v0/b/datastorage-9b3b6.appspot.com/o/CGV_1.2.pdf?alt=media&token=44523f6a-43ad-4e8e-b346-833cf18eabec";
+  const googleDocsViewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(
+    pdfUrl
+  )}&embedded=true`;
+
   return (
-    <div className='max-w-7xl mx-auto p-8 bg-white shadow-lg rounded-lg'>
-      <header className='text-center mb-8'>
-        <h1 className='text-3xl font-bold text-gray-800'>Review Form to Author</h1>
-      </header>
-
-      <div className='flex'>
-        {/* Left side (blank) */}
-        <div className='w-1/2 p-4 bg-gray-100 rounded-lg mr-4'>
-          {/* Placeholder for left side */}
-          <div className="h-full flex items-center justify-center text-gray-500">
-            <span>paper</span>
+    <div>
+      <div className="flex min-h-[80vh] font-saira">
+        <div className="w-2/3">
+          <div className="px-5">
+            <div className="flex justify-between w-1/2 gap-5">
+              <div>
+                <h1 className="text-xl font-semibold">Paper ID</h1>
+                <p className="text-md">CGV_1.2</p>
+              </div>
+              <div>
+                <h1 className="text-xl font-semibold">Track ID</h1>
+                <p className="text-md">12121212</p>
+              </div>
+            </div>
+            <br />
+            <div>
+              <h1 className="text-xl font-semibold">Title</h1>
+              <p className="text-md">
+                New Quantum effect on surroundings. Experimental Data acquiring
+                using atomic frequency and oscillations.
+              </p>
+            </div>
+          </div>
+          <div className=" bg-gray-200 ">
+            <iframe
+              src={googleDocsViewerUrl}
+              className="w-full h-[70vh] "
+            ></iframe>
           </div>
         </div>
 
-        {/* Right side (form) */}
-        <div className='w-1/2'>
-          <div className='bg-gray-100 p-6 rounded-lg mb-8'>
-            <div className="mb-4">
-              <b className="block text-gray-700">Paper ID</b>
-              <p className="text-gray-600">12144345</p>
+        <div className="w-1/3 p-4 max-h-[90vh] overflow-scroll">
+          <h2 className="text-2xl font-semibold mb-4">Reviewers feedback</h2>
+          {Object.keys(feedback).map((category, index) => (
+            <div key={index} className="mb-6">
+              <h3 className="text-lg font-medium mb-1">
+                {index + 1}. {category} <span className="text-red-500">*</span>
+              </h3>
+              <textarea
+                className="w-full p-2 mb-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Comment"
+                value={feedback[category]}
+                onChange={(e) =>
+                  setFeedback({ ...feedback, [category]: e.target.value })
+                }
+              ></textarea>
             </div>
-            <div className="mb-4">
-              <b className="block text-gray-700">Track</b>
-              <p className="text-gray-600">OTCJD24P</p>
-            </div>
-            <div>
-              <b className="block text-gray-700">Paper Title</b>
-              <p className="text-gray-600">Quantum state of electrons in an atom</p>
-            </div>
+          ))}
+
+          <div className="w-full flex justify-center gap-10 mb-10">
+            <Link className="bg-[#676565] text-white px-4 py-2 rounded-2xl" to="/editor/dashboard">
+              Submit
+            </Link>
+            <button className="bg-[#676565] text-white px-4 py-2 rounded-2xl">
+              Save Draft
+            </button>
+            <button className="bg-[#676565] text-white px-4 py-2 rounded-2xl">
+              Cancel
+            </button>
           </div>
-
-          <div>
-            <h2 className='text-2xl font-semibold text-gray-700 mb-4'>Review Questions</h2>
-
-            {[
-              "Quality of Research",
-              "Relevance",
-              "Clarity",
-              "Methodology",
-              "Originality",
-              "Citations",
-              "Feedback"
-            ].map((question, index) => (
-              <div key={index} className='mb-6'>
-                <label className='block text-lg font-medium text-gray-800 mb-2'>
-                  {index + 1}. {question}
-                </label>
-                <textarea
-                  className='w-full p-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-100'
-                  placeholder={`Enter your response for ${question}`}
-                  rows="2"
-                ></textarea>
-              </div>
-            ))}
-
-            <div className='flex justify-between mt-8'>
-              <button className='bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600'>
-                Submit
-              </button>
-              <button className='bg-gray-500 text-white px-6 py-2 rounded-md hover:bg-gray-600'>
-                Save Draft
-              </button>
-              <button className='bg-red-500 text-white px-6 py-2 rounded-md hover:bg-red-600'>
-                Cancel
-              </button>
-            </div>
-          </div>
+          <br />
+          <br />
+          <br />
+          <br />
         </div>
       </div>
     </div>
   );
 }
 
-export default ReviewForm;
+export default Editor6;

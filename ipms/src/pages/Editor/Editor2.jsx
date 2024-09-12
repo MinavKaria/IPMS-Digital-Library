@@ -4,14 +4,15 @@ import React from 'react'
 function Editor2() {
     return (
        <>
-         <div className="container mx-auto px-4">
+       <div className='w-full'>
+         <div className="container mx-auto px-5">
          <h1 className="text-black text-5xl font-semibold mb-1 mt-3">Reviewer Details</h1>
          <h1 className="text-black text-2xl font-semibold">Primary Reviewer Details</h1>
-          <form className="container  flex flex-col gap-8 opacity-110  rounded-3xl p-6 m-2" onSubmit={(e)=>{
+          <form className="container  flex flex-col gap-8 opacity-110  rounded-3xl " onSubmit={(e)=>{
             e.preventDefault()
           }}>
-            <div className="container mx-auto px-4">
-              <div className="flex flex-row m-4 mt-10">
+            <div className=" ">
+              <div className="flex flex-row  mt-10">
                 <div className="w-1/2">
                   <p className="text-lg text-cyan-700 mb-2">Reviewer Email ID</p>
                   <input
@@ -32,7 +33,7 @@ function Editor2() {
                 </div>
               </div>
   
-              <div className="flex flex-row m-4 mt-10">
+              <div className="flex flex-row mt-10">
                 <div className="w-1/2">
                   <p className="text-lg text-cyan-700 mb-2">Reviewer name</p>
                   <input
@@ -53,7 +54,7 @@ function Editor2() {
                 </div>
               </div>
   
-              <div className="flex flex-row m-4 mt-10">
+              <div className="flex flex-row mt-10">
                 <div className="w-1/2">
                   <p className="text-lg text-cyan-700 mb-2">Reviewer Institution</p>
                   <input
@@ -84,6 +85,9 @@ function Editor2() {
               </div>
              </div>
           </form>
+        </div>
+        <br />
+        <br />
         </div>
       </>
     )

@@ -6,7 +6,8 @@ const Context = createContext()
 function ContextProvider({ children }) 
 {
   const [isLogin, setIsLogin] = useState(true);
-  const [accessLevel,setAccessLevel] = useState(3);
+  const [accessLevel,setAccessLevel] = useState(5);
+  
   return (
     <Context.Provider value={{isLogin,setIsLogin,accessLevel,setAccessLevel}}>
       {children}

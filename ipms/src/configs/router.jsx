@@ -22,6 +22,8 @@ import Ce2 from '../pages/ChiefEditor/Ce2';
 import Ce4 from '../pages/ChiefEditor/Ce4';
 import Layout2 from '../pages/Layout2';
 import Guidelines from '../pages/Guidlines';
+import AuthorSubmission from '../pages/Editor/AuthorDashboard';
+import CE1 from '../pages/ChiefEditor/CE1';
 
 
 
@@ -63,7 +65,6 @@ const router = createBrowserRouter([
         path:'dashboard',
         element:<AuthorDashboard/>
       },
-     
       {
         path:'orchid',
         element:<Orchid/>
@@ -77,15 +78,7 @@ const router = createBrowserRouter([
         element:<ReviewBoard/>
       },
       
-      
-      {
-        path:'ce2',
-        element:<Ce2/>
-      },
-      {
-        path:'ce4',
-        element:<Ce4/>
-      },
+     
       {
         path:'guidelines',
         element:<Guidelines/>
@@ -133,17 +126,39 @@ const router = createBrowserRouter([
         element:<Editor3/>
       },
       {
-        path:'editor4',
+        path:'reviewerdetails/1',
         element:<Editor4/>
       },
       {
-        path:'editor5',
+        path:'reviewform',
         element:<Editor5/>
       },
       {
-        path:'editor6',
+        path:'reviewerdetails/2',
         element:<Editor6/>
       },
+      {
+         path:'authorsubmission',
+         element:<AuthorSubmission/>
+      }
+    ]
+  },
+  {
+    path: "chiefeditor/",
+    element: <Layout2/>,
+    children:[
+      {
+        path:'ce2',
+        element:<Ce2/>
+      },
+      {
+        path:'ce4',
+        element:<Ce4/>
+      },
+      {
+        path:'dashboard',
+        element:<CE1/>
+      }
     ]
   }
 ]);

@@ -28,7 +28,9 @@ function App() {
         </div>
       ) : (
         <ContextProvider>
+          <div className='font-saira'>
           <RouterProvider router={router} />
+          </div>
         </ContextProvider>
       )}
     </>
